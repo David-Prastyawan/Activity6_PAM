@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_edit_teman.xml" value="0.21910112359550563" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_main.xml" value="0.16853932584269662" />
         <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_teman.xml" value="0.1" />
-        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_teman_baru.xml" value="0.33" />
-        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/row_data_teman.xml" value="0.33" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/activity_teman_baru.xml" value="0.1" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/layout/row_data_teman.xml" value="0.1" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/menu/menu.xml" value="0.22" />
+        <entry key="..\:/Materi/smstr 4/PAM/SqLite/app/src/main/res/menu/popup_menu.xml" value="0.1824074074074074" />
       </map>
     </option>
   </component>

@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SqLite">
         <activity
+            android:name=".edit_teman"
+            android:exported="false" />
+        <activity
             android:name=".TemanBaru"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
