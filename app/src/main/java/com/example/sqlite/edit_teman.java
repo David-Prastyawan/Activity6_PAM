@@ -2,23 +2,25 @@ package com.example.sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.sqlite.database.DBController;
 import com.google.android.material.textfield.TextInputEditText;
+import com.example.sqlite.database.DBController;
 
 import java.util.HashMap;
 
 public class edit_teman extends AppCompatActivity {
 
     TextInputEditText Nama, Telepon;
-    Button Simpan;
-    String id, nm, tlp;
+    Button Save;
+    String nma, tlp, id;
     DBController controller = new DBController(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,36 +29,36 @@ public class edit_teman extends AppCompatActivity {
 
         Nama = findViewById(R.id.edNama);
         Telepon = findViewById(R.id.edTelp);
-        Simpan = findViewById(R.id.simpanBtn);
+        Save = findViewById(R.id.simpanBtn);
 
         id = getIntent().getStringExtra("id");
-        nm = getIntent().getStringExtra("nama");
-        tlp = getIntent().getStringExtra("telepon");
+        nma = getIntent().getStringExtra("nama");
+        tlp = getIntent().getStringExtra("telpon");
 
         setTitle("Edit Data");
-        Nama.setText(nm);
+        Nama.setText(nma);
         Telepon.setText(tlp);
 
-        Simpan.setOnClickListener(new View.OnClickListener() {
+        Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Nama.getText().toString().equals("") || Telepon.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "Mohon isi data terlebih dahulu!",Toast.LENGTH_LONG).show();
-                }else{
-                    nm = Nama.getText().toString();
+                if (Nama.getText().toString().equals("") || Telepon.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Mohon isi data terlebih dahulu !!!", Toast.LENGTH_LONG).show();
+                } else {
+                    nma = Nama.getText().toString();
                     tlp = Telepon.getText().toString();
-                    HashMap<String,String> values = new HashMap<>();
-                    values.put("id",id);
-                    values.put("nama",nm);
-                    values.put("telepon",tlp);
+                    HashMap<String, String> values = new HashMap<>();
+                    values.put("id", id);
+                    values.put("nama", nma);
+                    values.put("telpon", tlp);
                     controller.UpdateData(values);
                     callHome();
                 }
             }
         });
     }
-    private void callHome() {
-        Intent i = new Intent(edit_teman.this,MainActivity.class);
+    public void callHome(){
+        Intent i = new Intent(edit_teman.this, MainActivity.class);
         startActivity(i);
         finish();
     }

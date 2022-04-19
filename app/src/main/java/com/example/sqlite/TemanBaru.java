@@ -2,6 +2,7 @@ package com.example.sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class TemanBaru extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (tNama.getText().toString().equals("")||tTelpon.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "Isi semua data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Data belum komplit", Toast.LENGTH_SHORT).show();
                 } else {
                     nm = tNama.getText().toString();
                     tlp = tTelpon.getText().toString();
